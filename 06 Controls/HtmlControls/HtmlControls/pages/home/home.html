@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+    
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage" style="overflow:auto;">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">HTML Controls</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <input type="text" placeholder="input type='text'" /><br />
+            <input type="email" placeholder="input type='email'" /><br />
+            <input type="number" /><br />
+            <input type="month" /><br />
+            <input type="search" placeholder="input type='search'" /><br />
+            <input type="checkbox" /><br />
+            <input type="radio" /><br />
+            <button>&lt;button&gt;</button><br />
+            <select>
+                <option>One</option>
+                <option>Two</option>
+            </select><br />
+            <select multiple>
+                <option>One</option>
+                <option>Two</option>
+            </select><br />
+            <input type="range" /><br />
+            <progress></progress><br />
+            <textarea></textarea><br />
+            <div contenteditable="true">
+                Edit this text...
+            </div>
+            <p><br /></p>
+            <p><br /></p>
+            <p><br /></p>
+        </section>
+    </div>
+</body>
+</html>

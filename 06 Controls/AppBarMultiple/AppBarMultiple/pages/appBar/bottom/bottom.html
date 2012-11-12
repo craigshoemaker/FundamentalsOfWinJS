@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>appBar-bottom</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <script src="bottom.js"></script>
+</head>
+<body>
+    <div class="nav_bottom" data-win-control="WinJS.UI.AppBar" 
+        data-win-options="{placement:'bottom'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'edit', icon: 'edit'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'save', icon: 'save'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'clear', icon: 'clear'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'delete', icon: 'delete'}"></button>
+    </div>
+</body>
+</html>

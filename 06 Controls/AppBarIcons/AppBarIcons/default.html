@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AppBarIcons</title>
+
+    <style>
+        body {
+            overflow:auto;
+        }
+
+        #output {
+            position:fixed;
+            bottom:0px;
+            left:0px;
+            right:0px;
+            height:100px;
+            background-color:#333;
+        }
+
+        #icons {
+            padding-bottom:100px;
+        }
+
+        #button-preview {
+            padding-top:15px;
+            text-align:center;
+            margin-left:10%;
+            margin-right:20%;
+            width:100px;
+            float:left;
+        }
+
+        textarea {
+            height:90px;
+            width:50%;
+        }
+    </style>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- AppBarIcons references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="default.js"></script>
+</head>
+<body>
+    <div id="icons">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'previous', icon: 'previous'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'next', icon: 'next'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'play', icon: 'play'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'pause', icon: 'pause'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'edit', icon: 'edit'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'save', icon: 'save'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'clear', icon: 'clear'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'delete', icon: 'delete'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'remove', icon: 'remove'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'add', icon: 'add'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'cancel', icon: 'cancel'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'accept', icon: 'accept'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'more', icon: 'more'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'redo', icon: 'redo'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'undo', icon: 'undo'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'home', icon: 'home'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'up', icon: 'up'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'forward', icon: 'forward'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'right', icon: 'right'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'back', icon: 'back'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'left', icon: 'left'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'favorite', icon: 'favorite'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'camera', icon: 'camera'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'settings', icon: 'settings'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'video', icon: 'video'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'sync', icon: 'sync'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'download', icon: 'download'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mail', icon: 'mail'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'find', icon: 'find'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'help', icon: 'help'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'upload', icon: 'upload'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'emoji', icon: 'emoji'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'twopage', icon: 'twopage'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'leavechat', icon: 'leavechat'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mailforward', icon: 'mailforward'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'clock', icon: 'clock'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'send', icon: 'send'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'crop', icon: 'crop'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'rotatecamera', icon: 'rotatecamera'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'people', icon: 'people'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'closepane', icon: 'closepane'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'openpane', icon: 'openpane'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'world', icon: 'world'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'flag', icon: 'flag'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'previewlink', icon: 'previewlink'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'globe', icon: 'globe'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'trim', icon: 'trim'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'attachcamera', icon: 'attachcamera'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'zoomin', icon: 'zoomin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'bookmarks', icon: 'bookmarks'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'document', icon: 'document'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'protecteddocument', icon: 'protecteddocument'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'page', icon: 'page'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'bullets', icon: 'bullets'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'comment', icon: 'comment'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mail2', icon: 'mail2'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'contactinfo', icon: 'contactinfo'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'hangup', icon: 'hangup'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'viewall', icon: 'viewall'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mappin', icon: 'mappin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'phone', icon: 'phone'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'videochat', icon: 'videochat'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'switch', icon: 'switch'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'contact', icon: 'contact'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'rename', icon: 'rename'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'pin', icon: 'pin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'musicinfo', icon: 'musicinfo'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'go', icon: 'go'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'keyboard', icon: 'keyboard'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'dockleft', icon: 'dockleft'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'dockright', icon: 'dockright'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'dockbottom', icon: 'dockbottom'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'remote', icon: 'remote'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'refresh', icon: 'refresh'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'rotate', icon: 'rotate'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'shuffle', icon: 'shuffle'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'list', icon: 'list'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'shop', icon: 'shop'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'selectall', icon: 'selectall'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'orientation', icon: 'orientation'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'import', icon: 'import'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'importall', icon: 'importall'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'browsephotos', icon: 'browsephotos'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'webcam', icon: 'webcam'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'pictures', icon: 'pictures'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'savelocal', icon: 'savelocal'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'caption', icon: 'caption'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'stop', icon: 'stop'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'showresults ', icon: 'showresults'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'volume', icon: 'volume'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'repair', icon: 'repair'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'message', icon: 'message'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'page2', icon: 'page2'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'calendarday', icon: 'calendarday'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'calendarweek', icon: 'calendarweek'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'calendar', icon: 'calendar'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'characters', icon: 'characters'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mailreplyall', icon: 'mailreplyall'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'read', icon: 'read'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'link', icon: 'link'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'accounts', icon: 'accounts'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'showbcc', icon: 'showbcc'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'hidebcc', icon: 'hidebcc'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'cut', icon: 'cut'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'attach', icon: 'attach'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'paste', icon: 'paste'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'filter', icon: 'filter'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'copy', icon: 'copy'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'emoji2', icon: 'emoji2'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'important', icon: 'important'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mailreply', icon: 'mailreply'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'slideshow', icon: 'slideshow'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'sort', icon: 'sort'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'contactpresence', icon: 'contactpresence'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'priority', icon: 'priority'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'uploadskydrive', icon: 'uploadskydrive'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'gototoday', icon: 'gototoday'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'font', icon: 'font'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'fontcolor', icon: 'fontcolor'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'contact2', icon: 'contact2'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'folder', icon: 'folder'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'audio', icon: 'audio'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'placeholder', icon: 'placeholder'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'view', icon: 'view'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'setlockscreen', icon: 'setlockscreen'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'settile', icon: 'settile'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'cc', icon: 'cc'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'stopslideshow', icon: 'stopslideshow'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'permissions', icon: 'permissions'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'highlight', icon: 'highlight'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'disableupdates', icon: 'disableupdates'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'unfavorite', icon: 'unfavorite'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'unpin', icon: 'unpin'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'openlocal', icon: 'openlocal'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'mute', icon: 'mute'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'italic', icon: 'italic'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'underline', icon: 'underline'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'bold', icon: 'bold'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'movetofolder', icon: 'movetofolder'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'likedislike ', icon: 'likedislike'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'dislike', icon: 'dislike'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'like', icon: 'like'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'alignright', icon: 'alignright'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'aligncenter', icon: 'aligncenter'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'alignleft', icon: 'alignleft'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'zoom', icon: 'zoom'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'zoomout', icon: 'zoomout'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'openfile', icon: 'openfile'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'otheruser', icon: 'otheruser'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{label:'admin', icon: 'admin'}"></button>
+    </div>
+    <div id="output">
+        <div id="button-preview">&nbsp;</div>
+        <div><textarea id="code-box"></textarea></div>
+    </div>
+</body>
+</html>

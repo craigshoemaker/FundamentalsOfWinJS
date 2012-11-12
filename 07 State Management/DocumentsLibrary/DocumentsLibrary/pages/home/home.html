@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+    
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <style>
+        h2 {
+            margin-top:1.25em;
+        }
+    </style>
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Documents Library</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main" 
+            data-win-bindsource="Application.Pages.Home.ViewModel">
+            
+            <h2>Folder</h2>
+            <input type="text" id="folder-name-box" placeholder="folder name" 
+                data-win-bind="onchange: setFolderName" /><br />
+
+            <button id="create-folder-button" 
+                data-win-bind="onclick: createFolder">Create Folder</button>
+
+            <button id="delete-folder" 
+                data-win-bind="onclick: deleteFolder">Delete Folder</button>
+
+            <button id="get-files" 
+                data-win-bind="onclick: getFiles">Get Files</button>
+
+            <h2>File Name</h2>
+            <input type="text" id="file-name-box" placeholder="file name" 
+                data-win-bind="onchange: setFileName" /><br />
+
+            <button id="create-file" 
+                data-win-bind="onclick: createFile">Create File</button>
+
+            <button id="get-file" 
+                data-win-bind="onclick: getFilePath">Get File Path</button>
+
+            <button id="delete-file" 
+                data-win-bind="onclick: deleteFile">Delete File</button><br />
+
+            <h2>File Contents</h2>
+            <textarea id="file-content-box" placeholder="File contents..." 
+                data-win-bind="onchange: setFileContent"></textarea><br />
+
+            <button id="write-content-button" 
+                data-win-bind="onclick: writeContent">Write Text</button>
+
+            <h2>Log</h2>
+            <div data-win-bind="innerText:message"></div>
+
+
+        </section>
+    </div>
+</body>
+</html>

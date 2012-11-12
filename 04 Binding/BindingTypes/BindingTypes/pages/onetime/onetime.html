@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>One Time Binding</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="onetime.css" rel="stylesheet" />
+    <script src="onetime.js"></script>
+</head>
+<body>
+    <div class="onetime fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">One Time Binding</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main"
+            data-win-bindsource="Application.Pages.OneTime.ViewModel">
+
+            <h2 data-win-bind="innerText: model.name"></h2>
+            <br />
+            <button id="changeNameButton">Change name to 'Craig Shoemaker'</button>
+            <div>Note: Nothing will happen since the data is bound only &quot;one time&quot;.</div>
+
+        </section>
+    </div>
+</body>
+</html>

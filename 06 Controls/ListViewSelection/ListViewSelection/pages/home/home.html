@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+    
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+    <script type="text/javascript" src="/js/movies.js"></script>
+</head>
+<body>
+    
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">ListView Single Selection</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            
+            <div id="itemTemplate" 
+                data-win-control="WinJS.Binding.Template" 
+                style="display: none">
+                <div class="item">
+                    <h3 data-win-bind="innerText: title"></h3>
+                </div>
+            </div>  
+
+            <div id="listView" 
+                data-win-control="WinJS.UI.ListView" 
+                data-win-options="{ 
+                    itemDataSource: Application.Data.movies.dataSource, 
+                    itemTemplate: select('#itemTemplate'), 
+                    selectionMode: 'single', 
+                    tapBehavior: 'invoke', 
+                    swipeBehavior: 'select', 
+                    layout: { type: WinJS.UI.GridLayout } 
+                }"
+            ></div>
+
+            <div id="msg"></div>
+
+        </section>
+    </div>
+</body>
+</html>

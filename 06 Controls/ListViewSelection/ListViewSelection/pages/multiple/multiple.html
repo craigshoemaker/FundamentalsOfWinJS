@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>multiple</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="multiple.css" rel="stylesheet" />
+    <script src="multiple.js"></script>
+    <script type="text/javascript" src="/js/movies.js"></script>
+</head>
+<body>
+    <div class="multiple fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">ListView Multiple Selection</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+
+            <button id="selectAll">Select All</button>
+            <button id="clearAll">Clear All</button>
+            <button id="showSelections">Show Selections</button>
+            
+            <div id="itemTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+                <div class="smallListIconTextItem">
+                    <div class="item">
+                        <h3 data-win-bind="innerText: title"></h3>
+                    </div>
+                </div>
+            </div>  
+
+            <div id="listView" 
+                data-win-control="WinJS.UI.ListView"
+                data-win-options="{ 
+                    itemDataSource: Application.Data.movies.dataSource, 
+                    itemTemplate: select('#itemTemplate'), 
+                    selectionMode: 'multi', 
+                    tapBehavior: 'invoke', 
+                    tapBehavior: 'toggleSelect', 
+                    layout: { type: WinJS.UI.GridLayout } 
+                }" 
+            ></div>
+
+            <div id="msg" style="overflow:auto;"></div>
+
+        </section>
+    </div>
+</body>
+</html>

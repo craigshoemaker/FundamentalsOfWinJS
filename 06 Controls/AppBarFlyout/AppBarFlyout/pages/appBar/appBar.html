@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>appBar</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <script src="appBar.js"></script>
+</head>
+<body>
+    <div id="settings-flyout" data-win-control="WinJS.UI.Flyout">
+        <div>Sync this document or all data?</div>
+        <button id="device-settings-button">This Document</button>
+        <button id="user-settings-button">All Data</button>
+    </div>
+    <div class="appbar" data-win-control="WinJS.UI.AppBar">
+
+        <button data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{
+            label:'Sync', 
+            icon: 'sync',
+            type:'flyout',
+            flyout:'settings-flyout'}"></button>
+    </div>
+</body>
+</html>

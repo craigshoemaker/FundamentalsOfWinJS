@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ApplicationLifecycle</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- ApplicationLifecycle references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="default.js"></script>
+    <script src="/js/navigator.js"></script>
+</head>
+<body>
+    <header>
+        <button id="clear-log-button">Clear Log</button>
+        <button data-page="home.html">Home</button>
+        <button data-page="settings.html">Settings</button>
+        <button data-page="about.html">About</button>
+    </header>
+    <div id="contenthost" 
+        data-win-control="Application.PageControlNavigator" 
+        data-win-options="{home: '/pages/home/home.html'}"></div>
+</body>
+</html>

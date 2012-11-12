@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+    
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="home.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Binding Converters</span>
+            </h1>
+        </header>
+        <section id="orderSummary" aria-label="Main content" role="main" 
+            data-win-bindsource="Application.Pages.Home.ViewModel">
+            
+            <table border="1" cellpadding="3" cellspacing="3" style="border-collapse:collapse;">
+                <tr>
+                    <th>Data Member</th>
+                    <th>Raw Value</th>
+                    <th>Converted Value</th>
+                </tr>
+                <tr>
+                    <td>Make</td>
+                    <td><span data-win-bind="innerText: model.make"></span></td>
+                    <td> - none - </td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td><span data-win-bind="innerText: model.model"></span></td>
+                    <td> - none - </td>
+                </tr>
+                <tr>
+                    <td>Full Product Name</td>
+                    <td> - none - </td>
+                    <td><span data-win-bind="innerText: model Application.Pages.Home.ViewModel.productNameConverter"></span></td>
+                </tr>
+                <tr>
+                    <td>Product Type</td>
+                    <td><span data-win-bind="innerText: model.productType"></span></td>
+                    <td><span data-win-bind="innerText: model.productType Application.Pages.Home.ViewModel.productTypeConverter"></span></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td><span data-win-bind="innerText: model.quantity"></span></td>
+                    <td><span data-win-bind="innerText: model.quantity; className: model.quantity Application.Pages.Home.ViewModel.quantityThresholdConverter"></span></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

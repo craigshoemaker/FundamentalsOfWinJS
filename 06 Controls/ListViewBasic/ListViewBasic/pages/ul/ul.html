@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ul</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    
+    <script src="ul.js"></script>
+</head>
+<body>
+    <div class="ul fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Template Binding to HTML UL</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            
+            <h2>Movies</h2>
+            <ul id="itemTemplate" data-win-control="WinJS.Binding.Template" style="display:none;">
+                <li data-win-bind="innerText: title">
+                </li>
+            </ul>
+
+            <ul id="ulContainer">
+            </ul>
+
+        </section>
+    </div>
+</body>
+</html>
